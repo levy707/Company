@@ -1,0 +1,37 @@
+html {
+  font-family: $font-roboto;
+  line-height: 1.2;
+  font-weight: 400;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 12px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $md) {
+    max-width: 1020px;
+    padding: 12px 20px;
+  }
+
+  //@media (min-width: $lg) {
+  //  max-width: 980px;
+  //}
+
+  //@media (min-width: $xl) {
+  //  max-width: 1785px;
+  //}
+}

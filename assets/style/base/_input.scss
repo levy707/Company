@@ -1,0 +1,67 @@
+.form-field {
+  $root: &;
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+
+  &#{$root}--focused,
+  &#{$root}--not-empty {
+    & #{$root}__label {
+      transform: translateY(-3px);
+      font-size: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &#{$root}--has-error {
+    & #{$root}__field {
+      border-bottom: 1px solid $Geraldine;
+      transition: border 0.3s ease-in-out;
+    }
+    & #{$root}__label {
+      color: $Geraldine;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 16px 0 8px;
+    border: none;
+    color: $Matterhorn;
+    border-bottom: 1px solid $VeryLightGrey;
+    background-color: transparent;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+  }
+
+  &__textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+  }
+
+  &__label {
+    color: $VeryLightGrey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    z-index: 1;
+    white-space: nowrap;
+    transform: translateY(15px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__label-required {
+    color: $Geraldine;
+  }
+
+  &__error-item {
+    display: block;
+    padding: 3px 0;
+    font-size: 10px;
+    color: $Geraldine;
+  }
+}
